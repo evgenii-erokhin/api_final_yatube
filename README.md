@@ -1,20 +1,24 @@
-# API training project for the Yatube social network
-**Как запустить проект:**
-Клонировать репозиторий и перейти в него в командной строке:
+# Учебный проект: написние API для соц. сети  Yatube.
 
-+ git clone https://github.com/yandex-praktikum/kittygram.git
-+ cd kittygram
+Проект создавался для отработки написания API.  Разработка осуществлялась на основании предоставленой документации API по которой следовало настроить работу API
+## Как запустить проект:
++ Клонировать репозиторий и перейти в него в командной строке:
+```git clone git@github.com:evgenii-erokhin/api_final_yatube.git```
+
+   `cd api_final_yatube`
+
 + Cоздать и активировать виртуальное окружение:
+    `python -m venv venv`
 
-+ python3 -m venv env
-+ source env/bin/activate
+  `source venv/Scripts/activate`
+
 + Установить зависимости из файла requirements.txt:
+`pip install -r requirements.txt`
 
-python3 -m pip install --upgrade pip
-pip install -r requirements.txt
-Выполнить миграции:
++ Выполнить миграции:
+`python manage.py migrate`
++ Запустить проект:
+`python manage.py runserver`
 
-python3 manage.py migrate
-Запустить проект:
-
-python3 manage.py runserver
+### Автор
+Evgenii Erokhin
