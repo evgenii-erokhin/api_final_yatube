@@ -95,9 +95,6 @@ class TestFollowAPI:
             'Проверьте, что POST-запрос с некорректными данными, '
             f'отправленный к `{self.url}`, возвращает ответ со статусом 400.'
         )
-        print(follow_count)
-        print(data)
-        print(response.data)
 
         assert_msg = (
             'Проверьте, что POST-запрос с корректными данными, отправленный '
