@@ -1,34 +1,52 @@
-# Учебный проект: написние API для соц. сети  Yatube.
+# Учебный проект: написние API для соц.сети Yatube.
 
-Проект создавался для отработки написания API.  Разработка осуществлялась на основании предоставленой документации API по которой следовало настроить работу API
-## Технологии:
+Проект создавался для отработки написания REST API.
+В проектет реализован CRUD, который позволяет создавать, удалять, редактировать свои посты, а также коментировать и просматривать чужие. Аутентификация реализована по токену TokenAuthentication.
+
+В этом проекте исключен фронтенд и вью функции, весь функционал **Yatube** можно найти [здесь.](https://github.com/evgenii-erokhin/yatube_social_network "Полный проект Yatube")
+### Технологии:
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
 ![DjangoREST](https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray)
-## Как запустить проект:
-+ Клонировать репозиторий и перейти в него в командной строке:
+### Как запустить проект:
+1. Клонировать репозиторий и перейти в созданую дерикторию в командной строке:
+   ```
+   git clone git@github.com:evgenii-erokhin/api_for_yatube.git
+   ```
+   ```
+   cd api_for_yatube
+   ```
+2. Cоздать и активировать виртуальное окружение:
 
-  `git clone git@github.com:evgenii-erokhin/api_for_yatube.git`
+* Если у вас **Windows**:
+  ```
+  python -m venv venv
+  ```
+  ```
+  source venv/Scripts/activate
+  ```
+* Если у вас **Linux** или **macOS**:
+  ```
+  python3 -m venv venv
+  ```
+  ```
+  source venv/bib/activate
+  ```
+3. Установоить зависимости:
+   ```
+   pip install -r requirements.txt
+   ```
 
-   `cd api_for_yatube`
+4. Выполнить миграции:
+   ```
+   python manage.py migrate
+   ```
 
-+ Cоздать и активировать виртуальное окружение:
-
-  `python -m venv venv`
-
-  `source venv/Scripts/activate`
-
-+ Установить зависимости из файла requirements.txt:
-
-  `pip install -r requirements.txt`
-
-+ Выполнить миграции:
-
-  `python manage.py migrate`
-
-+ Запустить проект:
-
-  `python manage.py runserver`
+6. Запустить проект:
+   ```
+   python manage.py runserver
+   ```
+  
 ### Примеры запросов для аутентифицированных пользователей:
 1. `POST` запрос на эндпоинт - http://127.0.0.1:8000/api/v1/posts/
 
